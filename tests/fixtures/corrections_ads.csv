@@ -1,0 +1,14 @@
+Report ID,Report Version,Reporting Entity,Report Type,Report Month,Report Year,Driver / Operator Type,ADAS/ADS System Version,ADS Equipped?,Automation System Engaged?,Operating Entity,Incident Date,City,State,Roadway Type,SV Pre-Crash Movement,SV Precrash Speed (MPH),Crash With,Highest Injury Severity Alleged,Narrative,Narrative - CBI?,Within ODD?,Report Submission Date
+R-BLANK,1,Example ADS Co,Initial,7,2022,In-Vehicle (Commercial/Test),v1,Yes,,Example Ops,2022-07-01,Austin,TX,Highway,Going Straight,5,Vehicle,No Injuries,Blank engaged,No,Yes,JUL-2022
+R-BLANK,2,Example ADS Co,Update,8,2022,In-Vehicle (Commercial/Test),v1,Yes,ADAS,Example Ops,2022-07-01,Austin,TX,Highway,Going Straight,5,Vehicle,No Injuries,Filled engaged,No,Yes,AUG-2022
+R-FLIP,1,Example ADS Co,Initial,1,2022,Consumer,v1,Yes,ADS,Example Ops,2022-01-01,Phoenix,AZ,Street,Going Straight,10,Vehicle,No Injuries,Flip one,No,Yes,JAN-2022
+R-FLIP,2,Example ADS Co,Update,2,2022,Consumer,v1,Yes,ADAS,Example Ops,2022-01-01,Phoenix,AZ,Street,Going Straight,10,Vehicle,No Injuries,Flip two,No,Yes,FEB-2022
+R-FLIP,3,Example ADS Co,Update,3,2022,Consumer,v1,Yes,ADS,Example Ops,2022-01-01,Phoenix,AZ,Highway,Going Straight,10,Vehicle,No Injuries,Flip three,No,Yes,MAR-2022
+R-LEVEL,1,Example ADS Co,Update,1,2022,Consumer,v1,Yes,ADAS,Example Ops,2022-01-15,Phoenix,AZ,Street,Stopped,0,Vehicle,No Injuries,Earlier narrative,No,Yes,JAN-2022
+R-LEVEL,2,Example ADS Co,Update,2,2022,None,v1,Yes,ADS,Example Ops,2022-01-15,Phoenix,AZ,Highway,Going Straight,25,Vehicle,No Injuries,Later narrative,No,Yes,FEB-2022
+R-PERIOD,1,Example ADS Co,Initial,3,2023,Consumer,v1,Yes,ADS,Example Ops,APR-2022,Austin,TX,Street,Going Straight,10,Vehicle,No Injuries,Period one,No,Yes,
+R-PERIOD,2,Example ADS Co,Update,4,2023,Consumer,v1,Yes,ADAS,Example Ops,APR-2022,Austin,TX,Street,Going Straight,10,Vehicle,No Injuries,Period two,No,Yes,
+R-SAME,1,Example ADS Co,Initial,1,2022,Consumer,v1,Yes,ADS,Example Ops,2022-03-01,Austin,TX,Street,Going Straight,10,Vehicle,No Injuries,Stable,No,Yes,MAR-2022
+R-SAME,2,Example ADS Co,Update,4,2022,Consumer,v1,Yes,ADS,Example Ops,2022-03-01,Austin,TX,Street,Going Straight,10,Vehicle,No Injuries,Stable update,No,Unknown,APR-2022
+R-UNK,1,Example ADS Co,Initial,5,2022,Consumer,v1,Yes,"Unknown, see Narrative",Example Ops,2022-05-01,Austin,TX,Street,Going Straight,10,Vehicle,No Injuries,Unknown first,No,Unknown,MAY-2022
+R-UNK,2,Example ADS Co,Update,6,2022,Consumer,v1,Yes,ADS,Example Ops,2022-05-01,Austin,TX,Street,Going Straight,10,Vehicle,No Injuries,Now ADS,No,Yes,JUN-2022

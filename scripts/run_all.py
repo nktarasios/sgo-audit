@@ -22,9 +22,12 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 RESULTS = ROOT / "results"
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from src.corrections import format_summary_lines, summarize_corrections_file
 
 
 def run(cmd: list[str], *, check: bool = True) -> subprocess.CompletedProcess[str]:
@@ -109,6 +112,15 @@ def resolve_data_vintage(
         if first:
             return parse_vintage_label(first[0])
     return parse_vintage_label(fallback)
+
+
+def corrections_summary_lines() -> list[str]:
+    """Markdown for the Phase A answer key, counted from ``results/corrections.csv``."""
+
+    path = ROOT / "results" / "corrections.csv"
+    if not path.exists():
+        return format_summary_lines(None)
+    return format_summary_lines(summarize_corrections_file(path))
 
 
 def copy_if_exists(src: Path, dest: Path) -> None:
@@ -208,7 +220,9 @@ def build_summary(
 
     ads_rows = ingest.get("inputs", {}).get("ads", {}).get("rows_clean", "?")
     adas_rows = ingest.get("inputs", {}).get("adas", {}).get("rows_clean", "?")
-    combined = ads_rows if isinstance(ads_rows, int) and isinstance(adas_rows, int) else None
+    combined = (
+        ads_rows if isinstance(ads_rows, int) and isinstance(adas_rows, int) else None
+    )
     if combined is not None:
         combined = ads_rows + adas_rows
 
@@ -241,6 +255,7 @@ def build_summary(
         f"- Combined (approx): `{combined if combined is not None else 'see ingest_metadata.json'}`",
         f"- Heuristic-flagged records: `{heuristic_n}`",
         "",
+        *corrections_summary_lines(),
         "## Phase 1 — classical classifier",
         f"- Selected flag model: `{operating.get('selected_flag_model', metrics.get('selected_flag_model', 'n/a'))}`",
         f"- Probability calibration: `{calibration}` (default `none`; see decision below)",
@@ -291,30 +306,54 @@ def build_summary(
         "- `consensus_review_queue.csv`",
         "- `consensus_summary.json`",
         "- `validation_note.md`",
+        "- `corrections.csv`",
         "",
     ]
     return "\n".join(lines)
 
 
-def publish_results(*, vintage: str, llm_backend: str, llm_sample: int, ollama_model: str) -> None:
+def publish_results(
+    *, vintage: str, llm_backend: str, llm_sample: int, ollama_model: str
+) -> None:
     RESULTS.mkdir(parents=True, exist_ok=True)
-    copy_if_exists(ROOT / "data/processed/ingest_metadata.json", RESULTS / "ingest_metadata.json")
+    copy_if_exists(
+        ROOT / "data/processed/ingest_metadata.json", RESULTS / "ingest_metadata.json"
+    )
     copy_if_exists(
         ROOT / "data/processed/classifier_operating_point.json",
         RESULTS / "classifier_operating_point.json",
     )
-    copy_if_exists(ROOT / "data/processed/classifier_metrics.json", RESULTS / "classifier_metrics.json")
-    copy_if_exists(ROOT / "data/processed/disagreement_matrix.json", RESULTS / "disagreement_matrix.json")
-    copy_if_exists(ROOT / "data/processed/validation_report.json", RESULTS / "validation_report.json")
-    copy_if_exists(ROOT / "data/processed/heuristic_flags.csv", RESULTS / "heuristic_flags.csv")
+    copy_if_exists(
+        ROOT / "data/processed/classifier_metrics.json",
+        RESULTS / "classifier_metrics.json",
+    )
+    copy_if_exists(
+        ROOT / "data/processed/disagreement_matrix.json",
+        RESULTS / "disagreement_matrix.json",
+    )
+    copy_if_exists(
+        ROOT / "data/processed/validation_report.json",
+        RESULTS / "validation_report.json",
+    )
+    copy_if_exists(
+        ROOT / "data/processed/heuristic_flags.csv", RESULTS / "heuristic_flags.csv"
+    )
     copy_if_exists(
         ROOT / "data/processed/classifier_flagged_records.csv",
         RESULTS / "classifier_flagged_records.csv",
     )
     copy_if_exists(ROOT / "outputs/validation_note.md", RESULTS / "validation_note.md")
-    copy_if_exists(ROOT / "data/processed/phase_comparison.csv", RESULTS / "phase_comparison.csv")
-    copy_if_exists(ROOT / "data/processed/consensus_review_queue.csv", RESULTS / "consensus_review_queue.csv")
-    copy_if_exists(ROOT / "data/processed/consensus_summary.json", RESULTS / "consensus_summary.json")
+    copy_if_exists(
+        ROOT / "data/processed/phase_comparison.csv", RESULTS / "phase_comparison.csv"
+    )
+    copy_if_exists(
+        ROOT / "data/processed/consensus_review_queue.csv",
+        RESULTS / "consensus_review_queue.csv",
+    )
+    copy_if_exists(
+        ROOT / "data/processed/consensus_summary.json",
+        RESULTS / "consensus_summary.json",
+    )
     summary = build_summary(
         vintage=vintage,
         llm_backend=llm_backend,
@@ -326,8 +365,12 @@ def publish_results(*, vintage: str, llm_backend: str, llm_sample: int, ollama_m
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Run SGO-Audit end-to-end and publish results/")
-    parser.add_argument("--current", action="store_true", help="Use current third-amended CSVs")
+    parser = argparse.ArgumentParser(
+        description="Run SGO-Audit end-to-end and publish results/"
+    )
+    parser.add_argument(
+        "--current", action="store_true", help="Use current third-amended CSVs"
+    )
     parser.add_argument("--skip-download", action="store_true")
     parser.add_argument("--llm-sample", type=int, default=50)
     parser.add_argument("--ollama-model", default="llama3.2:1b")
@@ -360,6 +403,7 @@ def main(argv: list[str] | None = None) -> int:
     vintage = resolve_data_vintage(vintage_file=vintage_path)
 
     run([py, "-m", "src.ingest"])
+    run([py, "-m", "src.corrections", "--output", str(RESULTS / "corrections.csv")])
     run([py, "-m", "src.heuristics"])
     run([py, "-m", "src.entity_trends"])
     run([py, "-m", "src.classifier"])
