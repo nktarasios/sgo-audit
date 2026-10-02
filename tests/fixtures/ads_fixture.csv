@@ -1,0 +1,4 @@
+Report ID,Report Version,Reporting Entity,Report Type,Report Month,Report Year,Driver / Operator Type,ADAS/ADS System Version,ADS Equipped?,Automation System Engaged?,Operating Entity,Incident Date,City,State,Roadway Type,SV Pre-Crash Movement,SV Precrash Speed (MPH),Crash With,Highest Injury Severity Alleged,Narrative,Narrative - CBI?,Within ODD?
+ADS-1,1,Example ADS Co,Initial,1,2024,In-Vehicle (Commercial/Test),v1,Yes,ADS,Example Ops,2024-01-15,Phoenix,AZ,Street,Going Straight,25,Vehicle,No Injuries,Older version narrative,No,Yes
+ADS-1,2,Example ADS Co,Update,1,2024,Consumer,v2,Yes,ADAS,Example Ops,2024-01-15,Phoenix,AZ,Street,Going Straight,25,Vehicle,No Injuries,"[REDACTED, MAY CONTAIN CONFIDENTIAL BUSINESS INFORMATION]",Yes,Yes
+ADS-2,1,Example ADS Co,Initial,2,2024,In-Vehicle (Commercial/Test),v2,Yes,ADS,Example Ops,2024-02-20,Austin,TX,Highway,Going Straight,55,Vehicle,No Injuries,The driver took over after Autopilot warnings.,No,Yes

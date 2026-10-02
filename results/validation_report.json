@@ -1,0 +1,339 @@
+{
+  "caveats": [
+    "The validation sample is small and manually extracted from published ODI resumes.",
+    "The named ODI records are crashes scrutinized for FSD reduced-visibility performance, not labels proving automation-level misclassification.",
+    "Overlap between flags and ODI-named records is a directional review signal, not statistical proof.",
+    "Missing recent IDs may reflect the current Archive-2021-2025 data snapshot vintage rather than an error."
+  ],
+  "current_data_snapshot": {
+    "distinct_report_ids": 4589,
+    "expected_missing_ids_found": [],
+    "expected_present_ids_not_found": [],
+    "ingest_metadata": {
+      "data_vintage": "Archive-2021-2025",
+      "data_vintage_file": "data/raw/DATA_VINTAGE.txt",
+      "data_vintage_file_mtime_utc": "2026-07-23T23:31:53.980902+00:00",
+      "data_vintage_text": "DATA_VINTAGE=Archive-2021-2025\nDownloaded from https://static.nhtsa.gov/odi/ffdd/sgo-2021-01/Archive-2021-2025/\n2026-07-23T23:31:53.984813+00:00",
+      "generated_at_utc": "2026-07-23T23:33:17.742505+00:00",
+      "inputs": {
+        "adas": {
+          "columns_raw": 137,
+          "encoding_used": "utf-8:replace",
+          "mtime_utc": "2026-07-23T23:31:53.928902+00:00",
+          "path": "data/raw/SGO-2021-01_Incident_Reports_ADAS.csv",
+          "rows_clean": 2690,
+          "rows_raw": 4027,
+          "size_bytes": 4092534,
+          "source_file": "SGO-2021-01_Incident_Reports_ADAS.csv"
+        },
+        "ads": {
+          "columns_raw": 137,
+          "encoding_used": "utf-8:strict",
+          "mtime_utc": "2026-07-23T23:31:53.872902+00:00",
+          "path": "data/raw/SGO-2021-01_Incident_Reports_ADS.csv",
+          "rows_clean": 1899,
+          "rows_raw": 2295,
+          "size_bytes": 3943732,
+          "source_file": "SGO-2021-01_Incident_Reports_ADS.csv"
+        }
+      },
+      "keep_latest_report_version_per_report_id": true,
+      "outputs": {
+        "adas": [
+          "data/processed/adas_clean.csv",
+          "parquet_skipped:ImportError:Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        ],
+        "ads": [
+          "data/processed/ads_clean.csv",
+          "parquet_skipped:ImportError:Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        ],
+        "combined": [
+          "data/processed/combined_audit_frame.csv",
+          "parquet_skipped:ImportError:Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        ]
+      }
+    },
+    "path": "data/processed/combined_audit_frame.csv",
+    "records_loaded": 4589,
+    "reference_ids_missing": [
+      "13781-11937",
+      "13781-13211",
+      "13781-13569",
+      "13781-13633",
+      "13781-13693",
+      "13781-13788"
+    ],
+    "reference_ids_missing_count": 6,
+    "reference_ids_present": [
+      "13781-7181",
+      "13781-7381",
+      "13781-7767",
+      "13781-7964",
+      "13781-8004",
+      "13781-8977",
+      "13781-9267"
+    ],
+    "reference_ids_present_count": 7
+  },
+  "flag_sets": [
+    {
+      "distinct_report_ids": 37,
+      "name": "heuristic_flags",
+      "notes": "Phase 0 rule-based consistency flags.",
+      "path": "data/processed/heuristic_flags.csv",
+      "records_loaded": 37,
+      "reference_id_overlap_count": 0,
+      "reference_id_overlap_ids": [],
+      "snapshot_present_reference_id_overlap_count": 0,
+      "snapshot_present_reference_id_overlap_ids": [],
+      "status": "loaded"
+    },
+    {
+      "distinct_report_ids": 20,
+      "name": "classifier_flagged_records",
+      "notes": "Phase 1 high-confidence classifier/reported-label disagreements.",
+      "path": "data/processed/classifier_flagged_records.csv",
+      "records_loaded": 20,
+      "reference_id_overlap_count": 0,
+      "reference_id_overlap_ids": [],
+      "snapshot_present_reference_id_overlap_count": 0,
+      "snapshot_present_reference_id_overlap_ids": [],
+      "status": "loaded"
+    },
+    {
+      "distinct_report_ids": 0,
+      "name": "phase1_phase2_agree_vs_reported",
+      "notes": "Optional Phase 2 comparison subset where disagreement_category == 'phase1_phase2_agree_vs_reported'.",
+      "path": "data/processed/phase_comparison.csv",
+      "records_loaded": 0,
+      "reference_id_overlap_count": 0,
+      "reference_id_overlap_ids": [],
+      "snapshot_present_reference_id_overlap_count": 0,
+      "snapshot_present_reference_id_overlap_ids": [],
+      "status": "loaded"
+    }
+  ],
+  "generated_at_utc": "2026-07-23T23:39:32.877092+00:00",
+  "reference": {
+    "archive_2021_2025_expected_missing_ids": [
+      "13781-11937",
+      "13781-13211",
+      "13781-13569",
+      "13781-13633",
+      "13781-13693",
+      "13781-13788"
+    ],
+    "archive_2021_2025_expected_present_ids": [
+      "13781-7181",
+      "13781-7381",
+      "13781-7767",
+      "13781-7964",
+      "13781-8004",
+      "13781-8977",
+      "13781-9267"
+    ],
+    "description": "Manual Phase 3 extraction of SGO Report IDs named in published NHTSA ODI investigation resumes for Tesla FSD reduced-visibility crashes. These IDs are used only to ask whether SGO-Audit consistency flags overlap with records NHTSA has already named/scrutinized.",
+    "investigations": [
+      {
+        "investigation_name": "EA26002 Open Resume",
+        "notes": "Engineering Analysis opened for FSD collisions in reduced roadway visibility conditions. The resume names six recent potentially related SGO Report IDs and seven failure-report-summary SGO Report IDs. The six recent IDs are not expected in the current Archive-2021-2025 snapshot.",
+        "report_id_count": 13,
+        "url": "https://static.nhtsa.gov/odi/inv/2026/INOA-EA26002-10023.pdf"
+      },
+      {
+        "investigation_name": "PE24031 Close Resume",
+        "notes": "Preliminary Evaluation closing resume for FSD collisions in reduced roadway visibility conditions. The failure report summary lists seven SGO Report IDs.",
+        "report_id_count": 7,
+        "url": "https://static.nhtsa.gov/odi/inv/2024/INCLA-PE24031-87755.pdf"
+      },
+      {
+        "investigation_name": "PE24031 Open Resume",
+        "notes": "Preliminary Evaluation opening resume for FSD collisions in reduced roadway visibility conditions. The opening resume names four initiating SGO Report IDs.",
+        "report_id_count": 4,
+        "url": "https://static.nhtsa.gov/odi/inv/2024/INOA-PE24031-23232.pdf"
+      }
+    ],
+    "path": "data/reference/nhtsa_investigation_report_ids.json",
+    "reference_id_count": 13,
+    "reference_ids": [
+      "13781-11937",
+      "13781-13211",
+      "13781-13569",
+      "13781-13633",
+      "13781-13693",
+      "13781-13788",
+      "13781-7181",
+      "13781-7381",
+      "13781-7767",
+      "13781-7964",
+      "13781-8004",
+      "13781-8977",
+      "13781-9267"
+    ],
+    "sources_by_report_id": {
+      "13781-11937": [
+        {
+          "investigation_name": "EA26002 Open Resume",
+          "notes": "Engineering Analysis opened for FSD collisions in reduced roadway visibility conditions. The resume names six recent potentially related SGO Report IDs and seven failure-report-summary SGO Report IDs. The six recent IDs are not expected in the current Archive-2021-2025 snapshot.",
+          "report_id_notes": "Recent potentially related incident named in EA26002; expected missing from Archive-2021-2025 snapshot.",
+          "url": "https://static.nhtsa.gov/odi/inv/2026/INOA-EA26002-10023.pdf"
+        }
+      ],
+      "13781-13211": [
+        {
+          "investigation_name": "EA26002 Open Resume",
+          "notes": "Engineering Analysis opened for FSD collisions in reduced roadway visibility conditions. The resume names six recent potentially related SGO Report IDs and seven failure-report-summary SGO Report IDs. The six recent IDs are not expected in the current Archive-2021-2025 snapshot.",
+          "report_id_notes": "Recent potentially related incident named in EA26002; expected missing from Archive-2021-2025 snapshot.",
+          "url": "https://static.nhtsa.gov/odi/inv/2026/INOA-EA26002-10023.pdf"
+        }
+      ],
+      "13781-13569": [
+        {
+          "investigation_name": "EA26002 Open Resume",
+          "notes": "Engineering Analysis opened for FSD collisions in reduced roadway visibility conditions. The resume names six recent potentially related SGO Report IDs and seven failure-report-summary SGO Report IDs. The six recent IDs are not expected in the current Archive-2021-2025 snapshot.",
+          "report_id_notes": "Recent potentially related incident named in EA26002; expected missing from Archive-2021-2025 snapshot.",
+          "url": "https://static.nhtsa.gov/odi/inv/2026/INOA-EA26002-10023.pdf"
+        }
+      ],
+      "13781-13633": [
+        {
+          "investigation_name": "EA26002 Open Resume",
+          "notes": "Engineering Analysis opened for FSD collisions in reduced roadway visibility conditions. The resume names six recent potentially related SGO Report IDs and seven failure-report-summary SGO Report IDs. The six recent IDs are not expected in the current Archive-2021-2025 snapshot.",
+          "report_id_notes": "Recent potentially related incident named in EA26002; expected missing from Archive-2021-2025 snapshot.",
+          "url": "https://static.nhtsa.gov/odi/inv/2026/INOA-EA26002-10023.pdf"
+        }
+      ],
+      "13781-13693": [
+        {
+          "investigation_name": "EA26002 Open Resume",
+          "notes": "Engineering Analysis opened for FSD collisions in reduced roadway visibility conditions. The resume names six recent potentially related SGO Report IDs and seven failure-report-summary SGO Report IDs. The six recent IDs are not expected in the current Archive-2021-2025 snapshot.",
+          "report_id_notes": "Recent potentially related incident named in EA26002; expected missing from Archive-2021-2025 snapshot.",
+          "url": "https://static.nhtsa.gov/odi/inv/2026/INOA-EA26002-10023.pdf"
+        }
+      ],
+      "13781-13788": [
+        {
+          "investigation_name": "EA26002 Open Resume",
+          "notes": "Engineering Analysis opened for FSD collisions in reduced roadway visibility conditions. The resume names six recent potentially related SGO Report IDs and seven failure-report-summary SGO Report IDs. The six recent IDs are not expected in the current Archive-2021-2025 snapshot.",
+          "report_id_notes": "Recent potentially related incident named in EA26002; expected missing from Archive-2021-2025 snapshot.",
+          "url": "https://static.nhtsa.gov/odi/inv/2026/INOA-EA26002-10023.pdf"
+        }
+      ],
+      "13781-7181": [
+        {
+          "investigation_name": "EA26002 Open Resume",
+          "notes": "Engineering Analysis opened for FSD collisions in reduced roadway visibility conditions. The resume names six recent potentially related SGO Report IDs and seven failure-report-summary SGO Report IDs. The six recent IDs are not expected in the current Archive-2021-2025 snapshot.",
+          "report_id_notes": "Failure-report-summary ID also present in Archive-2021-2025 combined data.",
+          "url": "https://static.nhtsa.gov/odi/inv/2026/INOA-EA26002-10023.pdf"
+        },
+        {
+          "investigation_name": "PE24031 Close Resume",
+          "notes": "Preliminary Evaluation closing resume for FSD collisions in reduced roadway visibility conditions. The failure report summary lists seven SGO Report IDs.",
+          "url": "https://static.nhtsa.gov/odi/inv/2024/INCLA-PE24031-87755.pdf"
+        },
+        {
+          "investigation_name": "PE24031 Open Resume",
+          "notes": "Preliminary Evaluation opening resume for FSD collisions in reduced roadway visibility conditions. The opening resume names four initiating SGO Report IDs.",
+          "url": "https://static.nhtsa.gov/odi/inv/2024/INOA-PE24031-23232.pdf"
+        }
+      ],
+      "13781-7381": [
+        {
+          "investigation_name": "EA26002 Open Resume",
+          "notes": "Engineering Analysis opened for FSD collisions in reduced roadway visibility conditions. The resume names six recent potentially related SGO Report IDs and seven failure-report-summary SGO Report IDs. The six recent IDs are not expected in the current Archive-2021-2025 snapshot.",
+          "report_id_notes": "Failure-report-summary ID also present in Archive-2021-2025 combined data.",
+          "url": "https://static.nhtsa.gov/odi/inv/2026/INOA-EA26002-10023.pdf"
+        },
+        {
+          "investigation_name": "PE24031 Close Resume",
+          "notes": "Preliminary Evaluation closing resume for FSD collisions in reduced roadway visibility conditions. The failure report summary lists seven SGO Report IDs.",
+          "url": "https://static.nhtsa.gov/odi/inv/2024/INCLA-PE24031-87755.pdf"
+        },
+        {
+          "investigation_name": "PE24031 Open Resume",
+          "notes": "Preliminary Evaluation opening resume for FSD collisions in reduced roadway visibility conditions. The opening resume names four initiating SGO Report IDs.",
+          "url": "https://static.nhtsa.gov/odi/inv/2024/INOA-PE24031-23232.pdf"
+        }
+      ],
+      "13781-7767": [
+        {
+          "investigation_name": "EA26002 Open Resume",
+          "notes": "Engineering Analysis opened for FSD collisions in reduced roadway visibility conditions. The resume names six recent potentially related SGO Report IDs and seven failure-report-summary SGO Report IDs. The six recent IDs are not expected in the current Archive-2021-2025 snapshot.",
+          "report_id_notes": "Failure-report-summary ID also present in Archive-2021-2025 combined data.",
+          "url": "https://static.nhtsa.gov/odi/inv/2026/INOA-EA26002-10023.pdf"
+        },
+        {
+          "investigation_name": "PE24031 Close Resume",
+          "notes": "Preliminary Evaluation closing resume for FSD collisions in reduced roadway visibility conditions. The failure report summary lists seven SGO Report IDs.",
+          "url": "https://static.nhtsa.gov/odi/inv/2024/INCLA-PE24031-87755.pdf"
+        },
+        {
+          "investigation_name": "PE24031 Open Resume",
+          "notes": "Preliminary Evaluation opening resume for FSD collisions in reduced roadway visibility conditions. The opening resume names four initiating SGO Report IDs.",
+          "url": "https://static.nhtsa.gov/odi/inv/2024/INOA-PE24031-23232.pdf"
+        }
+      ],
+      "13781-7964": [
+        {
+          "investigation_name": "EA26002 Open Resume",
+          "notes": "Engineering Analysis opened for FSD collisions in reduced roadway visibility conditions. The resume names six recent potentially related SGO Report IDs and seven failure-report-summary SGO Report IDs. The six recent IDs are not expected in the current Archive-2021-2025 snapshot.",
+          "report_id_notes": "Failure-report-summary ID also present in Archive-2021-2025 combined data.",
+          "url": "https://static.nhtsa.gov/odi/inv/2026/INOA-EA26002-10023.pdf"
+        },
+        {
+          "investigation_name": "PE24031 Close Resume",
+          "notes": "Preliminary Evaluation closing resume for FSD collisions in reduced roadway visibility conditions. The failure report summary lists seven SGO Report IDs.",
+          "url": "https://static.nhtsa.gov/odi/inv/2024/INCLA-PE24031-87755.pdf"
+        }
+      ],
+      "13781-8004": [
+        {
+          "investigation_name": "EA26002 Open Resume",
+          "notes": "Engineering Analysis opened for FSD collisions in reduced roadway visibility conditions. The resume names six recent potentially related SGO Report IDs and seven failure-report-summary SGO Report IDs. The six recent IDs are not expected in the current Archive-2021-2025 snapshot.",
+          "report_id_notes": "Failure-report-summary ID also present in Archive-2021-2025 combined data.",
+          "url": "https://static.nhtsa.gov/odi/inv/2026/INOA-EA26002-10023.pdf"
+        },
+        {
+          "investigation_name": "PE24031 Close Resume",
+          "notes": "Preliminary Evaluation closing resume for FSD collisions in reduced roadway visibility conditions. The failure report summary lists seven SGO Report IDs.",
+          "url": "https://static.nhtsa.gov/odi/inv/2024/INCLA-PE24031-87755.pdf"
+        },
+        {
+          "investigation_name": "PE24031 Open Resume",
+          "notes": "Preliminary Evaluation opening resume for FSD collisions in reduced roadway visibility conditions. The opening resume names four initiating SGO Report IDs.",
+          "url": "https://static.nhtsa.gov/odi/inv/2024/INOA-PE24031-23232.pdf"
+        }
+      ],
+      "13781-8977": [
+        {
+          "investigation_name": "EA26002 Open Resume",
+          "notes": "Engineering Analysis opened for FSD collisions in reduced roadway visibility conditions. The resume names six recent potentially related SGO Report IDs and seven failure-report-summary SGO Report IDs. The six recent IDs are not expected in the current Archive-2021-2025 snapshot.",
+          "report_id_notes": "Failure-report-summary ID also present in Archive-2021-2025 combined data.",
+          "url": "https://static.nhtsa.gov/odi/inv/2026/INOA-EA26002-10023.pdf"
+        },
+        {
+          "investigation_name": "PE24031 Close Resume",
+          "notes": "Preliminary Evaluation closing resume for FSD collisions in reduced roadway visibility conditions. The failure report summary lists seven SGO Report IDs.",
+          "url": "https://static.nhtsa.gov/odi/inv/2024/INCLA-PE24031-87755.pdf"
+        }
+      ],
+      "13781-9267": [
+        {
+          "investigation_name": "EA26002 Open Resume",
+          "notes": "Engineering Analysis opened for FSD collisions in reduced roadway visibility conditions. The resume names six recent potentially related SGO Report IDs and seven failure-report-summary SGO Report IDs. The six recent IDs are not expected in the current Archive-2021-2025 snapshot.",
+          "report_id_notes": "Failure-report-summary ID also present in Archive-2021-2025 combined data.",
+          "url": "https://static.nhtsa.gov/odi/inv/2026/INOA-EA26002-10023.pdf"
+        },
+        {
+          "investigation_name": "PE24031 Close Resume",
+          "notes": "Preliminary Evaluation closing resume for FSD collisions in reduced roadway visibility conditions. The failure report summary lists seven SGO Report IDs.",
+          "url": "https://static.nhtsa.gov/odi/inv/2024/INCLA-PE24031-87755.pdf"
+        }
+      ]
+    }
+  },
+  "responsible_use": "Flags are review signals only, not findings of misclassification, fault, or comparative safety performance.",
+  "validation_framing": "Directional validation only: these ODI investigation IDs identify crashes NHTSA scrutinized for FSD reduced-visibility performance, not labeled ground truth for automation-level misclassification.",
+  "validation_note_path": "outputs/validation_note.md",
+  "validation_report_path": "data/processed/validation_report.json"
+}

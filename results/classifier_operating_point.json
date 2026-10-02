@@ -1,0 +1,24 @@
+{
+  "methodology": {
+    "model_weights": "class_weight='balanced' for logistic regression and LightGBM/fallback gradient boosting",
+    "split": "stratified train/test split",
+    "threshold_selection": "stratified cross-validation with synthetic label flips"
+  },
+  "operating_point": {
+    "f1": 0.5341426403641882,
+    "false_negative_count": 290.0,
+    "false_positive_count": 17.0,
+    "flagged_count": 193.0,
+    "flagged_rate": 0.042057093048594466,
+    "known_positive_count": 466.0,
+    "mean_flag_confidence": 0.9897581881287232,
+    "precision": 0.9119170984455959,
+    "rationale": "Selected the threshold that meets the synthetic mislabel precision target of 80%, maximizing recall within that precision constraint.",
+    "recall": 0.3776824034334764,
+    "target_precision": 0.8,
+    "threshold": 0.59,
+    "true_positive_count": 176.0
+  },
+  "responsible_use": "Flags are review candidates only, not confirmed misclassifications or safety-rate claims.",
+  "selected_flag_model": "lightgbm"
+}

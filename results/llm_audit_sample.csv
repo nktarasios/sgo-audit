@@ -1,0 +1,301 @@
+Report ID,Reporting Entity,reported_automation_level,llm_inferred_automation_level,llm_rationale,inference_backend,inference_status,model_name,prompt_version,raw_model_response,responsible_use
+30270-11087,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle ('Waymo AV') was reported to be in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle ('Waymo AV') was reported to be in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-11085,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle was reported to be in autonomous mode when the collision occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle was reported to be in autonomous mode when the collision occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10919,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle ('Waymo AV') was reported to be operating in autonomous mode.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle ('Waymo AV') was reported to be operating in autonomous mode.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10970,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle was in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle was in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10917,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle ('Waymo AV') was in autonomous mode when it collided with the reversing SUV.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle ('Waymo AV') was in autonomous mode when it collided with the reversing SUV.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10953,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle ('Waymo AV') was reported to be in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle ('Waymo AV') was reported to be in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10962,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle was reported to be in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle was reported to be in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10859,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle was reported to be in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle was reported to be in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-11016,Waymo LLC,ADS,Level 2 ADAS,The Waymo AV was in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""Level 2 ADAS"",
+  ""rationale"": ""The Waymo AV was in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-11014,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle (AV) was reported to be in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle (AV) was reported to be in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-11035,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle ('Waymo AV') was reported to be in autonomous mode while engaging in an incident where it had to stop and reverse to avoid colliding with another vehicle.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle ('Waymo AV') was reported to be in autonomous mode while engaging in an incident where it had to stop and reverse to avoid colliding with another vehicle.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-11063,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle ('Waymo AV') was reported to be in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle ('Waymo AV') was reported to be in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-11067,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle ('Waymo AV') was reported to be operating in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle ('Waymo AV') was reported to be operating in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-11002,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle ('Waymo AV') was reported to be in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle ('Waymo AV') was reported to be in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-11062,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle ('Waymo AV') was operating in autonomous mode and engaging in Level 4 ADS.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle ('Waymo AV') was operating in autonomous mode and engaging in Level 4 ADS.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-11066,Waymo LLC,ADS,Level 2 ADAS,The Waymo Autonomous Vehicle was engaged in autonomous mode when the collision occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""Level 2 ADAS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle was engaged in autonomous mode when the collision occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10964,Waymo LLC,ADS,Level 2 ADAS,The Waymo AV was stopped in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""Level 2 ADAS"",
+  ""rationale"": ""The Waymo AV was stopped in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-11001,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle ('Waymo AV') was operating in autonomous mode and engaging in Level 4 Automated Driving System (ADS).,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle ('Waymo AV') was operating in autonomous mode and engaging in Level 4 Automated Driving System (ADS).""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-11010,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle ('Waymo AV') was operating in autonomous mode and engaging in Level 4 ADS.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle ('Waymo AV') was operating in autonomous mode and engaging in Level 4 ADS.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10920,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle was reported to be in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""Level 4 ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle was reported to be in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10968,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle ('Waymo AV') was reported to be in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle ('Waymo AV') was reported to be in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10918,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle was reported to be in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle was reported to be in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10921,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle ('Waymo AV') was reported to be in autonomous mode when the collision occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle ('Waymo AV') was reported to be in autonomous mode when the collision occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10954,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle ('Waymo AV') was reported to be operating in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle ('Waymo AV') was reported to be operating in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10946,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle was in autonomous mode when it collided with the heavy truck.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle was in autonomous mode when it collided with the heavy truck.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10976,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle was reported to be in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle was reported to be in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10860,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle was in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle was in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-11019,Waymo LLC,ADS,Level 2 ADAS,The Waymo AV was reported to be in autonomous mode and engaged in Level 4 ADS.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""Level 2 ADAS"",
+  ""rationale"": ""The Waymo AV was reported to be in autonomous mode and engaged in Level 4 ADS.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10975,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle ('Waymo AV') was reported to be operating in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle ('Waymo AV') was reported to be operating in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10928,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle ('Waymo AV') was reported to be in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle ('Waymo AV') was reported to be in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10974,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle ('Waymo AV') was reported to be operating in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle ('Waymo AV') was reported to be operating in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10973,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle ('Waymo AV') was operating in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle ('Waymo AV') was operating in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10897,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle was reported to be in autonomous mode when the collision occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle was reported to be in autonomous mode when the collision occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10925,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle was reported to be in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle was reported to be in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10972,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle ('Waymo AV') was reported to be operating in autonomous mode during the incident.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle ('Waymo AV') was reported to be operating in autonomous mode during the incident.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10894,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle ('Waymo AV') was reported to be operating in autonomous mode when it collided with the SUV.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle ('Waymo AV') was reported to be operating in autonomous mode when it collided with the SUV.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10969,Waymo LLC,ADS,Level 2 ADAS,The Waymo Autonomous Vehicle was in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""Level 2 ADAS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle was in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10886,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle was engaged in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle was engaged in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10961,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle ('Waymo AV') was reported to be operating in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle ('Waymo AV') was reported to be operating in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10890,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle ('Waymo AV') was reported to be operating in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle ('Waymo AV') was reported to be operating in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10924,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle ('Waymo AV') was reported to be in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle ('Waymo AV') was reported to be in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10956,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle ('Waymo AV') was reported to be operating in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle ('Waymo AV') was reported to be operating in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10889,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle ('Waymo AV') was in autonomous mode while engaging in an incident where it collided with a passenger car.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle ('Waymo AV') was in autonomous mode while engaging in an incident where it collided with a passenger car.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10923,Waymo LLC,ADS,Level 2 ADAS,"The Waymo AV was stopped facing east on [XXX] for a stop sign at the intersection at [XXX], waiting for southbound traffic to clear before proceeding to turn right onto [XXX]. The test driver assumed manual control of the Waymo AV and reversed, and the rear of the Waymo AV made contact with the front of a pickup truck stopped directly behind the Waymo AV.",transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""Level 2 ADAS"",
+  ""rationale"": ""The Waymo AV was stopped facing east on [XXX] for a stop sign at the intersection at [XXX], waiting for southbound traffic to clear before proceeding to turn right onto [XXX]. The test driver assumed manual control of the Waymo AV and reversed, and the rear of the Waymo AV made contact with the front of a pickup truck stopped directly behind the Waymo AV.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10955,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle was reported to be in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle was reported to be in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10888,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle ('Waymo AV') was reported to be in autonomous mode when the incident occurred.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle ('Waymo AV') was reported to be in autonomous mode when the incident occurred.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10861,Waymo LLC,ADS,ADS,The Waymo Autonomous Vehicle ('Waymo AV') was reported to be in autonomous mode while engaging in an incident.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""ADS"",
+  ""rationale"": ""The Waymo Autonomous Vehicle ('Waymo AV') was reported to be in autonomous mode while engaging in an incident.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30270-10660,Waymo LLC,ADS,Level 2 ADAS,The Waymo AV was in Level 4 ADS mode but had manually intervened to avoid the collision.,transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""Level 2 ADAS"",
+  ""rationale"": ""The Waymo AV was in Level 4 ADS mode but had manually intervened to avoid the collision.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30610-10473,"Zoox, Inc.",ADS,Level 2 ADAS,"The narrative describes a situation where a Zoox vehicle (Vehicle 1) was anticipating a left-turning vehicle (Vehicle 2) and braking to avoid collision. However, instead of continuing its intended path, Vehicle 2 stopped fully yielding to Vehicle 1. This indicates that the driver of Vehicle 2 did not have full control over their vehicle, suggesting they were using some form of autonomous assistance provided by the vehicle's technology.",transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""Level 2 ADAS"",
+  ""rationale"": ""The narrative describes a situation where a Zoox vehicle (Vehicle 1) was anticipating a left-turning vehicle (Vehicle 2) and braking to avoid collision. However, instead of continuing its intended path, Vehicle 2 stopped fully yielding to Vehicle 1. This indicates that the driver of Vehicle 2 did not have full control over their vehicle, suggesting they were using some form of autonomous assistance provided by the vehicle's technology.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.
+30610-10294,"Zoox, Inc.",ADS,Level 2 ADAS,"The narrative describes a Zoox vehicle in autonomous mode attempting to make a left turn while yielding to cross traffic. It mentions that the operator disengaged from autonomy due to hand gestures from a stopped bus, indicating partial control over the vehicle.",transformers,ok,Qwen/Qwen2.5-1.5B-Instruct,phase2_narrative_label_v1,"```json
+{
+  ""label"": ""Level 2 ADAS"",
+  ""rationale"": ""The narrative describes a Zoox vehicle in autonomous mode attempting to make a left turn while yielding to cross traffic. It mentions that the operator disengaged from autonomy due to hand gestures from a stopped bus, indicating partial control over the vehicle.""
+}
+```",Flags are for human review only; they are not confirmed misclassifications or safety-rate claims.

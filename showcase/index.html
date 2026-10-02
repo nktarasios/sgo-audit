@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SGO-Audit · Does the automation label match the record?</title>
+    <meta
+      name="description"
+      content="SGO-Audit flags public NHTSA crash reports whose ADS vs Level 2 ADAS labels look inconsistent with the rest of the record, for human review."
+    />
+    <meta property="og:title" content="SGO-Audit" />
+    <meta
+      property="og:description"
+      content="Open-source audit tool for automation-label consistency in NHTSA SGO crash data."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#demo">Skip to mini demo</a>
+
+    <header class="site-nav">
+      <div class="nav-brand">SGO-Audit</div>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#problem">Problem</a>
+        <a href="#approach">Approach</a>
+        <a href="#demo">Demo</a>
+        <a href="#proof">Proof</a>
+        <a href="#run">Reproduce</a>
+      </nav>
+      <a class="nav-cta" id="repo-link" href="https://github.com/nktarasios/sgo-audit" target="_blank" rel="noreferrer">GitHub</a>
+    </header>
+
+    <main>
+      <section class="hero" aria-label="SGO-Audit">
+        <div class="hero-copy">
+          <p class="brand">/ Data-quality audit · NHTSA SGO crash reports</p>
+          <h1>Does the reported automation label <em>match the rest of the record?</em></h1>
+          <p class="lede">
+            An open-source data-quality tool for public NHTSA crash reports.
+            It flags ADS vs Level&nbsp;2 ADAS labels that look inconsistent, 
+            so a human can review them.
+          </p>
+          <div class="cta-row">
+            <a class="btn primary" href="#demo">Try the mini demo</a>
+            <a class="btn ghost" href="#approach">See how it works</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="plain-strip" id="plain">
+        <div class="section-inner">
+          <p class="plain-kicker">In one sentence</p>
+          <p class="plain-line">
+            Manufacturers report crashes as either <strong>self-driving (ADS)</strong> or
+            <strong>driver-assist (Level 2 ADAS)</strong>. SGO-Audit checks whether that
+            label looks consistent with the same public record, using rules, an ML model,
+            and a local AI reader, then queues mismatches for people to inspect.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="problem">
+        <div class="section-inner narrow">
+          <p class="eyebrow">01 · Problem</p>
+          <h2>Self-reported labels in a high-stakes public dataset</h2>
+          <p class="section-lede">
+            NHTSA’s Standing General Order (SGO) crash data is used by researchers,
+            journalists, and policymakers. The ADS vs Level&nbsp;2 ADAS label is
+            self-reported, and NHTSA has said some records get corrected over time.
+          </p>
+          <p class="body-copy">
+            If you take every label at face value, you can misread the dataset.
+            SGO-Audit asks a narrower question: <em>does this record’s label look
+            consistent with its own fields and narrative?</em>
+          </p>
+        </div>
+      </section>
+
+      <section class="section approach" id="approach">
+        <div class="section-inner">
+          <p class="eyebrow">02 · Approach</p>
+          <h2>Four checks. Plain English.</h2>
+          <p class="section-lede">
+            Think of it as three independent reviewers plus a ranking desk.
+            None of them “decide the truth.” They raise their hand when something looks off.
+          </p>
+          <ol class="tool-rail" id="tool-rail"></ol>
+        </div>
+      </section>
+
+      <section class="section operating" id="operating">
+        <div class="section-inner">
+          <p class="eyebrow">03 · Operating point</p>
+          <h2>Prefer a short, high-confidence queue</h2>
+          <p class="section-lede">
+            The ML model could flag thousands of maybe-wrong labels. Instead we choose a
+            <strong>precision-first</strong> threshold: keep synthetic precision at least
+            80%, then maximize recall inside that constraint.
+          </p>
+          <div class="op-strip" id="op-strip"></div>
+          <p class="body-copy" id="op-rationale"></p>
+        </div>
+      </section>
+
+      <section class="section boundary" id="boundary">
+        <div class="section-inner narrow">
+          <p class="eyebrow">04 · Boundary</p>
+          <h2>What this is not</h2>
+          <ul class="boundary-list">
+            <li><strong>Not a verdict.</strong> A flag means “worth human review,” never “this label is wrong.”</li>
+            <li><strong>Not a safety score.</strong> No manufacturer rankings, no crash rates, no “who is safer.”</li>
+            <li><strong>Not exposure-normalized.</strong> SGO data lacks a reliable miles-driven denominator.</li>
+            <li><strong>Not affiliated with NHTSA</strong> or any automaker.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section demo" id="demo">
+        <div class="section-inner">
+          <p class="eyebrow">05 · Mini demo</p>
+          <h2>Watch one record get audited</h2>
+          <p class="section-lede">
+            Pick a case. Press run. See what the rule checker, ML model, and narrative
+            reader each say, then whether it lands in the review queue.
+          </p>
+
+          <div class="demo-board" role="region" aria-label="Interactive audit demo">
+            <div class="demo-picks" id="demo-picks"></div>
+            <article class="demo-stage">
+              <header class="demo-case-head">
+                <div>
+                  <p class="demo-id" id="demo-id"></p>
+                  <h3 id="demo-summary">Choose a case to begin.</h3>
+                </div>
+                <button type="button" class="btn primary" id="demo-run">Run audit</button>
+              </header>
+              <p class="demo-reported" id="demo-reported"></p>
+              <div class="demo-steps" id="demo-steps">
+                <div class="demo-step" data-step="rule">
+                  <span class="step-label">1 · Rule checker</span>
+                  <p class="step-body">Waiting…</p>
+                </div>
+                <div class="demo-step" data-step="model">
+                  <span class="step-label">2 · ML model</span>
+                  <p class="step-body">Waiting…</p>
+                </div>
+                <div class="demo-step" data-step="llm">
+                  <span class="step-label">3 · LLM narrative reader</span>
+                  <p class="step-body">Waiting…</p>
+                </div>
+              </div>
+              <p class="demo-verdict" id="demo-verdict" hidden></p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section proof" id="proof">
+        <div class="section-inner">
+          <p class="eyebrow">06 · Proof</p>
+          <h2>Tracked results on Archive-2021-2025</h2>
+          <p class="section-lede" id="proof-lede">Loading…</p>
+          <div class="metric-strip" id="metric-strip"></div>
+          <div class="proof-grid">
+            <article class="proof-block">
+              <h3>Phase 1 × Phase 2 sample</h3>
+              <p id="disagree-copy"></p>
+              <div class="bar-stack" id="disagree-bars"></div>
+            </article>
+            <article class="proof-block">
+              <h3>ODI investigation cross-check</h3>
+              <p id="validation-copy"></p>
+              <ul class="caveat-list" id="caveat-list"></ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section queue" id="queue">
+        <div class="section-inner">
+          <h2>Live review queue</h2>
+          <p class="section-lede">
+            Browse the tracked consensus queue. Filter by which checker disagreed.
+          </p>
+          <div class="queue-controls">
+            <button type="button" class="chip active" data-filter="all">All</button>
+            <button type="button" class="chip" data-filter="heuristic">Rule checker</button>
+            <button type="button" class="chip" data-filter="phase1">ML model</button>
+            <button type="button" class="chip" data-filter="phase2">LLM reader</button>
+            <label class="search-wrap">
+              <span class="sr-only">Search</span>
+              <input id="queue-search" type="search" placeholder="Search report ID or entity" />
+            </label>
+          </div>
+          <div class="queue-shell">
+            <table class="queue-table">
+              <thead>
+                <tr>
+                  <th>Report ID</th>
+                  <th>Entity</th>
+                  <th>Reported</th>
+                  <th>Checks</th>
+                  <th>Why it was queued</th>
+                </tr>
+              </thead>
+              <tbody id="queue-body"></tbody>
+            </table>
+          </div>
+          <p class="queue-meta" id="queue-meta"></p>
+        </div>
+      </section>
+
+      <section class="section run" id="run">
+        <div class="section-inner">
+          <p class="eyebrow">07 · Reproduce</p>
+          <h2>Same pipeline. Fresh data. Your machine.</h2>
+          <p class="section-lede">
+            Re-run on NHTSA’s archived 2021–2025 snapshot (canonical demo) or the
+            current third-amended CSVs. To adapt to another similarly structured crash
+            dataset, map columns in <code>src/fields.py</code> and keep the same
+            three-signal pattern.
+          </p>
+          <div class="repro-grid">
+            <div>
+              <h3>Canonical Archive run</h3>
+              <pre class="code-block"><code>pip install -r requirements.txt
+python scripts/download_data.py
+python scripts/run_all.py --llm-backend transformers --llm-sample 50
+python scripts/build_showcase_data.py
+python scripts/serve_showcase.py</code></pre>
+            </div>
+            <div>
+              <h3>Current NHTSA CSVs</h3>
+              <pre class="code-block"><code>python scripts/download_data.py --current --overwrite
+python scripts/run_all.py --current --llm-backend transformers --llm-sample 50</code></pre>
+              <p class="run-note">
+                Unit tests use tiny fixtures and need no download:
+                <code>python -m pytest</code>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-inner footer-inner">
+        <strong>SGO-Audit</strong>
+        <span id="footer-vintage"></span>
+        <span>MIT · Independent research · Not affiliated with NHTSA</span>
+        <span><a href="https://nabilkhoury.com/">Nabil Khoury</a> · <a href="https://nabilkhoury.com/projects/">Build log</a></span>
+      </div>
+    </footer>
+
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,2 @@
+DATA_VINTAGE=synthetic-fixture
+Downloaded from tests/fixtures

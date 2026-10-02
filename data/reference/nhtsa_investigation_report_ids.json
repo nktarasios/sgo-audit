@@ -1,0 +1,107 @@
+{
+  "description": "Manual Phase 3 extraction of SGO Report IDs named in published NHTSA ODI investigation resumes for Tesla FSD reduced-visibility crashes. These IDs are used only to ask whether SGO-Audit consistency flags overlap with records NHTSA has already named/scrutinized.",
+  "responsible_use": "These report IDs are not automation-level misclassification ground truth. Flags are review signals only, not findings of misclassification, fault, or comparative safety performance.",
+  "archive_2021_2025_expected_present_ids": [
+    "13781-8004",
+    "13781-7181",
+    "13781-7381",
+    "13781-7767",
+    "13781-7964",
+    "13781-8977",
+    "13781-9267"
+  ],
+  "archive_2021_2025_expected_missing_ids": [
+    "13781-11937",
+    "13781-13211",
+    "13781-13569",
+    "13781-13633",
+    "13781-13693",
+    "13781-13788"
+  ],
+  "investigations": [
+    {
+      "investigation_name": "EA26002 Open Resume",
+      "url": "https://static.nhtsa.gov/odi/inv/2026/INOA-EA26002-10023.pdf",
+      "notes": "Engineering Analysis opened for FSD collisions in reduced roadway visibility conditions. The resume names six recent potentially related SGO Report IDs and seven failure-report-summary SGO Report IDs. The six recent IDs are not expected in the current Archive-2021-2025 snapshot.",
+      "report_ids": [
+        {
+          "report_id": "13781-11937",
+          "notes": "Recent potentially related incident named in EA26002; expected missing from Archive-2021-2025 snapshot."
+        },
+        {
+          "report_id": "13781-13211",
+          "notes": "Recent potentially related incident named in EA26002; expected missing from Archive-2021-2025 snapshot."
+        },
+        {
+          "report_id": "13781-13569",
+          "notes": "Recent potentially related incident named in EA26002; expected missing from Archive-2021-2025 snapshot."
+        },
+        {
+          "report_id": "13781-13633",
+          "notes": "Recent potentially related incident named in EA26002; expected missing from Archive-2021-2025 snapshot."
+        },
+        {
+          "report_id": "13781-13693",
+          "notes": "Recent potentially related incident named in EA26002; expected missing from Archive-2021-2025 snapshot."
+        },
+        {
+          "report_id": "13781-13788",
+          "notes": "Recent potentially related incident named in EA26002; expected missing from Archive-2021-2025 snapshot."
+        },
+        {
+          "report_id": "13781-8004",
+          "notes": "Failure-report-summary ID also present in Archive-2021-2025 combined data."
+        },
+        {
+          "report_id": "13781-7181",
+          "notes": "Failure-report-summary ID also present in Archive-2021-2025 combined data."
+        },
+        {
+          "report_id": "13781-7381",
+          "notes": "Failure-report-summary ID also present in Archive-2021-2025 combined data."
+        },
+        {
+          "report_id": "13781-7767",
+          "notes": "Failure-report-summary ID also present in Archive-2021-2025 combined data."
+        },
+        {
+          "report_id": "13781-7964",
+          "notes": "Failure-report-summary ID also present in Archive-2021-2025 combined data."
+        },
+        {
+          "report_id": "13781-8977",
+          "notes": "Failure-report-summary ID also present in Archive-2021-2025 combined data."
+        },
+        {
+          "report_id": "13781-9267",
+          "notes": "Failure-report-summary ID also present in Archive-2021-2025 combined data."
+        }
+      ]
+    },
+    {
+      "investigation_name": "PE24031 Close Resume",
+      "url": "https://static.nhtsa.gov/odi/inv/2024/INCLA-PE24031-87755.pdf",
+      "notes": "Preliminary Evaluation closing resume for FSD collisions in reduced roadway visibility conditions. The failure report summary lists seven SGO Report IDs.",
+      "report_ids": [
+        "13781-8004",
+        "13781-7181",
+        "13781-7381",
+        "13781-7767",
+        "13781-7964",
+        "13781-8977",
+        "13781-9267"
+      ]
+    },
+    {
+      "investigation_name": "PE24031 Open Resume",
+      "url": "https://static.nhtsa.gov/odi/inv/2024/INOA-PE24031-23232.pdf",
+      "notes": "Preliminary Evaluation opening resume for FSD collisions in reduced roadway visibility conditions. The opening resume names four initiating SGO Report IDs.",
+      "report_ids": [
+        "13781-8004",
+        "13781-7181",
+        "13781-7381",
+        "13781-7767"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "generated_at_utc": "2026-07-23T23:39:32.410062+00:00",
+  "records_in_queue": 66,
+  "records_with_phase2_evidence": 9,
+  "responsible_use": "Consensus rows are review candidates only. Multiple methods disagreeing with the reported label raises review priority; it is not a confirmed misclassification, safety ranking, or safety-rate claim.",
+  "signal_totals": {
+    "heuristic_disagrees": 37,
+    "phase1_disagrees": 20,
+    "phase2_disagrees": 9
+  },
+  "tier_counts": {
+    "single_signal": 66,
+    "three_signal_consensus": 0,
+    "two_signal_consensus": 0
+  },
+  "total_records_considered": 4589
+}

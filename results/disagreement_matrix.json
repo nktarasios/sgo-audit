@@ -1,0 +1,32 @@
+{
+  "category_definitions": {
+    "all_agree": {
+      "definition": "Reported label, Phase 1 prediction, and Phase 2 narrative inference all match.",
+      "priority": "low"
+    },
+    "only_one_method_available": {
+      "definition": "One or more required labels are unavailable for a three-way comparison.",
+      "priority": "limited"
+    },
+    "phase1_phase2_agree_vs_reported": {
+      "definition": "Phase 1 and Phase 2 independently agree with each other and differ from the reported label; flagged for human review.",
+      "priority": "highest"
+    },
+    "phase1_phase2_disagree": {
+      "definition": "Phase 1 and Phase 2 disagree with each other; interesting or ambiguous, but not a strong standalone flag.",
+      "priority": "ambiguous"
+    }
+  },
+  "counts": {
+    "all_agree": 41,
+    "only_one_method_available": 0,
+    "phase1_phase2_agree_vs_reported": 0,
+    "phase1_phase2_disagree": 9
+  },
+  "generated_at_utc": "2026-07-23T23:39:31.638223+00:00",
+  "phase2_inference_backend_counts": {
+    "transformers": 50
+  },
+  "records_compared": 50,
+  "responsible_use": "Flags are for human review only; they are not confirmed misclassifications or safety-rate claims."
+}

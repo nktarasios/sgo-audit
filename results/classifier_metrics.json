@@ -1,0 +1,204 @@
+{
+  "artifacts": {
+    "logistic_feature_importance_csv": "data/processed/classifier_logistic_feature_importance.csv",
+    "logistic_feature_importance_png": "outputs/classifier_logistic_feature_importance.png",
+    "metrics_json": "data/processed/classifier_metrics.json",
+    "operating_point_json": "data/processed/classifier_operating_point.json",
+    "operating_point_note": "outputs/classifier_operating_point.md",
+    "precision_recall_curve_png": "outputs/classifier_precision_recall_curve.png",
+    "predictions_csv": "data/processed/classifier_predictions.csv",
+    "threshold_calibration_predictions_csv": "data/processed/classifier_threshold_calibration_predictions.csv",
+    "threshold_sweep_csv": "data/processed/classifier_threshold_sweep.csv"
+  },
+  "calibration": "none",
+  "class_imbalance_handling": {
+    "model_weights": "class_weight='balanced' for logistic regression and LightGBM/fallback gradient boosting",
+    "split": "stratified train/test split",
+    "threshold_selection": "stratified cross-validation with synthetic label flips"
+  },
+  "feature_policy": {
+    "ads_equipped_policy": "excluded as high-risk near-leak/source-membership proxy",
+    "excluded_high_risk": [
+      "ADS Equipped?"
+    ],
+    "excluded_leakage": [
+      "ADS Equipped?",
+      "Automation System Engaged?",
+      "Narrative",
+      "Report ID",
+      "reported_automation_level",
+      "source_file"
+    ],
+    "selected_categorical": [
+      "Driver / Operator Type",
+      "Roadway Type",
+      "Roadway Surface",
+      "Roadway Description",
+      "Lighting",
+      "Weather - Clear",
+      "Weather - Snow",
+      "Weather - Cloudy",
+      "Weather - Fog/Smoke",
+      "Weather - Rain",
+      "Weather - Severe Wind",
+      "Weather - Unknown",
+      "Weather - Other",
+      "Crash With",
+      "Highest Injury Severity Alleged",
+      "Property Damage?",
+      "CP Pre-Crash Movement",
+      "SV Pre-Crash Movement",
+      "SV Any Air Bags Deployed?",
+      "SV Was Vehicle Towed?",
+      "SV Were All Passengers Belted?",
+      "Within ODD?"
+    ],
+    "selected_heuristic_boolean": [
+      "ads_file_but_adas_engaged",
+      "adas_file_but_ads_engaged",
+      "ads_label_but_consumer_driver",
+      "adas_label_but_no_driver",
+      "ads_narrative_level2_language",
+      "any_heuristic_flag"
+    ],
+    "selected_numeric": [
+      "SV Precrash Speed (MPH)",
+      "Posted Speed Limit (MPH)"
+    ]
+  },
+  "flagged_records": {
+    "count": 20,
+    "path": "data/processed/classifier_flagged_records.csv",
+    "review_language": "Rows are flagged for review only; they are not findings of misclassification."
+  },
+  "generated_at_utc": "2026-07-23T23:33:23.860487+00:00",
+  "label_distribution": {
+    "ADS": 1899,
+    "Level 2 ADAS": 2690
+  },
+  "models": {
+    "lightgbm": {
+      "accuracy": 0.9947735191637631,
+      "balanced_accuracy": 0.994922968640025,
+      "class_labels": [
+        "ADS",
+        "Level 2 ADAS"
+      ],
+      "classification_report": {
+        "ADS": {
+          "f1-score": 0.9936974789915967,
+          "precision": 0.9916142557651991,
+          "recall": 0.9957894736842106,
+          "support": 475.0
+        },
+        "Level 2 ADAS": {
+          "f1-score": 0.9955357142857143,
+          "precision": 0.9970193740685543,
+          "recall": 0.9940564635958395,
+          "support": 673.0
+        },
+        "accuracy": 0.9947735191637631,
+        "macro avg": {
+          "f1-score": 0.9946165966386555,
+          "precision": 0.9943168149168767,
+          "recall": 0.994922968640025,
+          "support": 1148.0
+        },
+        "weighted avg": {
+          "f1-score": 0.9947751204140193,
+          "precision": 0.994782935746173,
+          "recall": 0.9947735191637631,
+          "support": 1148.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          473,
+          2
+        ],
+        [
+          4,
+          669
+        ]
+      ],
+      "f1_macro": 0.9946165966386555,
+      "log_loss": 0.013541563212105687
+    },
+    "logistic_regression": {
+      "accuracy": 0.9939024390243902,
+      "balanced_accuracy": 0.9947994056463596,
+      "class_labels": [
+        "ADS",
+        "Level 2 ADAS"
+      ],
+      "classification_report": {
+        "ADS": {
+          "f1-score": 0.9926854754440961,
+          "precision": 0.9854771784232366,
+          "recall": 1.0,
+          "support": 475.0
+        },
+        "Level 2 ADAS": {
+          "f1-score": 0.9947722180731889,
+          "precision": 1.0,
+          "recall": 0.9895988112927192,
+          "support": 673.0
+        },
+        "accuracy": 0.9939024390243902,
+        "macro avg": {
+          "f1-score": 0.9937288467586425,
+          "precision": 0.9927385892116183,
+          "recall": 0.9947994056463596,
+          "support": 1148.0
+        },
+        "weighted avg": {
+          "f1-score": 0.9939088010446009,
+          "precision": 0.9939909928144925,
+          "recall": 0.9939024390243902,
+          "support": 1148.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          475,
+          0
+        ],
+        [
+          7,
+          666
+        ]
+      ],
+      "f1_macro": 0.9937288467586425,
+      "log_loss": 0.01879706337641112
+    }
+  },
+  "operating_point": {
+    "f1": 0.5341426403641882,
+    "false_negative_count": 290.0,
+    "false_positive_count": 17.0,
+    "flagged_count": 193.0,
+    "flagged_rate": 0.042057093048594466,
+    "known_positive_count": 466.0,
+    "mean_flag_confidence": 0.9897581881287232,
+    "precision": 0.9119170984455959,
+    "rationale": "Selected the threshold that meets the synthetic mislabel precision target of 80%, maximizing recall within that precision constraint.",
+    "recall": 0.3776824034334764,
+    "target_precision": 0.8,
+    "threshold": 0.59,
+    "true_positive_count": 176.0
+  },
+  "prediction_records": {
+    "count": 4589,
+    "path": "data/processed/classifier_predictions.csv",
+    "review_language": "Rows are review signals only; they are not confirmed misclassifications."
+  },
+  "probability_calibration": {
+    "cv_folds": null,
+    "method": "none",
+    "note": "Uncalibrated model probabilities (historical default)."
+  },
+  "random_state": 42,
+  "row_count": 4589,
+  "selected_flag_model": "lightgbm",
+  "test_size": 0.25
+}

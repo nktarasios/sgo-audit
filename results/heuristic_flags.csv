@@ -1,0 +1,38 @@
+Report ID,Reporting Entity,Report Year,Report Month,source_file,reported_automation_level,heuristic_flag_count,rules_triggered,reasons
+30791-10003,AutoX Technologies Inc,2025,2,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_narrative_level2_language,ADS-labeled narrative contains narrow Level-2 driver-supervision language
+30413-9958,May Mobility,2025,1,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_narrative_level2_language,ADS-labeled narrative contains narrow Level-2 driver-supervision language
+30792-9317,WeRide Corp,2024,12,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_narrative_level2_language,ADS-labeled narrative contains narrow Level-2 driver-supervision language
+988-9101,PACCAR Incorporated,2024,11,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_narrative_level2_language,ADS-labeled narrative contains narrow Level-2 driver-supervision language
+30391-8984,Kodiak Robotics,2024,10,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_narrative_level2_language,ADS-labeled narrative contains narrow Level-2 driver-supervision language
+33257-8867,"VinFast Auto, LLC",2024,10,SGO-2021-01_Incident_Reports_ADS.csv,ADS,2,ads_file_but_adas_engaged; ads_label_but_consumer_driver,ADS source file reports Automation System Engaged? as ADAS; ADS-labeled record lists Driver / Operator Type as Consumer
+30412-8748,Cruise LLC,,,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_narrative_level2_language,ADS-labeled narrative contains narrow Level-2 driver-supervision language
+33257-8638,"VinFast Auto, LLC",2024,9,SGO-2021-01_Incident_Reports_ADS.csv,ADS,2,ads_file_but_adas_engaged; ads_label_but_consumer_driver,ADS source file reports Automation System Engaged? as ADAS; ADS-labeled record lists Driver / Operator Type as Consumer
+33257-8085,"VinFast Auto, LLC",2024,7,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_file_but_adas_engaged,ADS source file reports Automation System Engaged? as ADAS
+28349-5694,"Lucid USA, Inc.",,,SGO-2021-01_Incident_Reports_ADS.csv,ADS,2,ads_file_but_adas_engaged; ads_label_but_consumer_driver,ADS source file reports Automation System Engaged? as ADAS; ADS-labeled record lists Driver / Operator Type as Consumer
+30711-7848,Pony.ai,2024,6,SGO-2021-01_Incident_Reports_ADS.csv,ADS,2,ads_file_but_adas_engaged; ads_narrative_level2_language,ADS source file reports Automation System Engaged? as ADAS; ADS-labeled narrative contains narrow Level-2 driver-supervision language
+753-7780,"Kia America, Inc.",,,SGO-2021-01_Incident_Reports_ADS.csv,ADS,2,ads_file_but_adas_engaged; ads_label_but_consumer_driver,ADS source file reports Automation System Engaged? as ADAS; ADS-labeled record lists Driver / Operator Type as Consumer
+30270-7159,Waymo LLC,2024,1,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_file_but_adas_engaged,ADS source file reports Automation System Engaged? as ADAS
+30711-6431,Pony.ai,2023,10,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_narrative_level2_language,ADS-labeled narrative contains narrow Level-2 driver-supervision language
+30590-6382,Apple Inc.,,,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_narrative_level2_language,ADS-labeled narrative contains narrow Level-2 driver-supervision language
+669-5206,Hyundai Motor America,,,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_file_but_adas_engaged,ADS source file reports Automation System Engaged? as ADAS
+30610-2227,"Zoox, Inc.",,,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_file_but_adas_engaged,ADS source file reports Automation System Engaged? as ADAS
+30610-5224,"Zoox, Inc.",2023,4,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_narrative_level2_language,ADS-labeled narrative contains narrow Level-2 driver-supervision language
+30410-5003,Motional,2023,2,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_file_but_adas_engaged,ADS source file reports Automation System Engaged? as ADAS
+30690-4793,Robotic Research,2023,1,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_label_but_consumer_driver,ADS-labeled record lists Driver / Operator Type as Consumer
+30530-4264,"Aurora Operations, Inc.",2022,11,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_file_but_adas_engaged,ADS source file reports Automation System Engaged? as ADAS
+30610-4217,"Zoox, Inc.",2022,11,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_narrative_level2_language,ADS-labeled narrative contains narrow Level-2 driver-supervision language
+1422-4087,"Volvo Car USA, LLC",,,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_file_but_adas_engaged,ADS source file reports Automation System Engaged? as ADAS
+12381-3557,"Daimler Trucks North America, LLC",2022,7,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_narrative_level2_language,ADS-labeled narrative contains narrow Level-2 driver-supervision language
+30330-3561,"TORC Robotics, Inc.",2022,8,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_narrative_level2_language,ADS-labeled narrative contains narrow Level-2 driver-supervision language
+30330-3482,"TORC Robotics, Inc.",,,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_narrative_level2_language,ADS-labeled narrative contains narrow Level-2 driver-supervision language
+12381-3438,"Daimler Trucks North America, LLC",,,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_narrative_level2_language,ADS-labeled narrative contains narrow Level-2 driver-supervision language
+502-3416,Ford Motor Company,2022,6,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_narrative_level2_language,ADS-labeled narrative contains narrow Level-2 driver-supervision language
+30590-3431,Apple Inc.,2022,6,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_narrative_level2_language,ADS-labeled narrative contains narrow Level-2 driver-supervision language
+30290-3347,Argo AI,2022,6,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_narrative_level2_language,ADS-labeled narrative contains narrow Level-2 driver-supervision language
+10003-2932,"Navistar, Inc.",2022,5,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_label_but_consumer_driver,ADS-labeled record lists Driver / Operator Type as Consumer
+273-2632,"Chrysler (FCA US, LLC)",,,SGO-2021-01_Incident_Reports_ADS.csv,ADS,2,ads_file_but_adas_engaged; ads_label_but_consumer_driver,ADS source file reports Automation System Engaged? as ADAS; ADS-labeled record lists Driver / Operator Type as Consumer
+30610-2151,"Zoox, Inc.",2021,12,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_file_but_adas_engaged,ADS source file reports Automation System Engaged? as ADAS
+30531-1984,Transdev Alternative Services,,,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_file_but_adas_engaged,ADS source file reports Automation System Engaged? as ADAS
+30792-1699,WeRide Corp,2021,11,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_narrative_level2_language,ADS-labeled narrative contains narrow Level-2 driver-supervision language
+30590-1482,Apple Inc.,2021,9,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_narrative_level2_language,ADS-labeled narrative contains narrow Level-2 driver-supervision language
+30415-1317,NAVYA Inc.,,,SGO-2021-01_Incident_Reports_ADS.csv,ADS,1,ads_label_but_consumer_driver,ADS-labeled record lists Driver / Operator Type as Consumer

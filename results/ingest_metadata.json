@@ -1,0 +1,44 @@
+{
+  "data_vintage": "Archive-2021-2025",
+  "data_vintage_file": "data/raw/DATA_VINTAGE.txt",
+  "data_vintage_file_mtime_utc": "2026-07-23T23:31:53.980902+00:00",
+  "data_vintage_text": "DATA_VINTAGE=Archive-2021-2025\nDownloaded from https://static.nhtsa.gov/odi/ffdd/sgo-2021-01/Archive-2021-2025/\n2026-07-23T23:31:53.984813+00:00",
+  "generated_at_utc": "2026-07-23T23:33:17.742505+00:00",
+  "inputs": {
+    "adas": {
+      "columns_raw": 137,
+      "encoding_used": "utf-8:replace",
+      "mtime_utc": "2026-07-23T23:31:53.928902+00:00",
+      "path": "data/raw/SGO-2021-01_Incident_Reports_ADAS.csv",
+      "rows_clean": 2690,
+      "rows_raw": 4027,
+      "size_bytes": 4092534,
+      "source_file": "SGO-2021-01_Incident_Reports_ADAS.csv"
+    },
+    "ads": {
+      "columns_raw": 137,
+      "encoding_used": "utf-8:strict",
+      "mtime_utc": "2026-07-23T23:31:53.872902+00:00",
+      "path": "data/raw/SGO-2021-01_Incident_Reports_ADS.csv",
+      "rows_clean": 1899,
+      "rows_raw": 2295,
+      "size_bytes": 3943732,
+      "source_file": "SGO-2021-01_Incident_Reports_ADS.csv"
+    }
+  },
+  "keep_latest_report_version_per_report_id": true,
+  "outputs": {
+    "adas": [
+      "data/processed/adas_clean.csv",
+      "parquet_skipped:ImportError:Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+    ],
+    "ads": [
+      "data/processed/ads_clean.csv",
+      "parquet_skipped:ImportError:Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+    ],
+    "combined": [
+      "data/processed/combined_audit_frame.csv",
+      "parquet_skipped:ImportError:Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+    ]
+  }
+}

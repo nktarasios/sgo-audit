@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Large raw NHTSA downloads (fetch via scripts/download_data.py)
+data/raw/**/*.csv
+data/raw/**/*.pdf
+data/raw/**/*.txt
+data/raw/DATA_VINTAGE.txt
+!data/raw/.gitkeep
+
+# Generated outputs (keep structure)
+data/processed/*
+!data/processed/.gitkeep
+outputs/*
+!outputs/.gitkeep
+*.png
+!docs/**/*.png
