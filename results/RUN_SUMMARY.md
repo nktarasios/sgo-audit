@@ -60,6 +60,18 @@ the baseline for tracked metrics going forward.
 - Combined (approx): `4589`
 - Heuristic-flagged records: `37`
 
+## Corrections answer key (report versions)
+
+Documented changes in the automation-level field between an earlier and a
+later Report Version of the same Report ID. Built from the raw CSVs before
+latest-version collapse. These rows are version history for review, not
+findings of misclassification and not safety rates.
+
+- Label field: `Automation System Engaged?`
+- Automation-level corrections (ADS and Level 2 ADAS): `2` reports (`2` rows)
+- Other changes in that field: `73` reports (`73` rows)
+- Artifact: `results/corrections.csv`
+
 ## Phase 1, classical classifier
 - Selected flag model: `lightgbm`
 - Probability calibration: `none` (default `none`; see decision below)
@@ -110,3 +122,4 @@ manufacturer safety rankings, and not exposure-normalized crash rates.
 - `consensus_review_queue.csv`
 - `consensus_summary.json`
 - `validation_note.md`
+- `corrections.csv`

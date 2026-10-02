@@ -92,6 +92,9 @@ Run the phases:
 # Phase 0: clean raw ADAS/ADS CSVs.
 python -m src.ingest
 
+# Corrections answer key: automation-level changes across Report Versions.
+python -m src.corrections
+
 # Phase 0: apply explainable heuristic consistency rules.
 python -m src.heuristics
 

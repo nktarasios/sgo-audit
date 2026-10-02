@@ -12,13 +12,13 @@ import re
 
 import pandas as pd
 
-
 REPORT_ID = "Report ID"
 REPORT_VERSION = "Report Version"
 REPORTING_ENTITY = "Reporting Entity"
 REPORT_TYPE = "Report Type"
 REPORT_MONTH = "Report Month"
 REPORT_YEAR = "Report Year"
+REPORT_SUBMISSION_DATE = "Report Submission Date"
 DRIVER_OPERATOR_TYPE = "Driver / Operator Type"
 SYSTEM_VERSION = "ADAS/ADS System Version"
 ADS_EQUIPPED = "ADS Equipped?"

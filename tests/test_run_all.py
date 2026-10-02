@@ -6,7 +6,11 @@ import json
 
 import pytest
 
-from scripts.run_all import build_summary, count_reference_report_ids
+from scripts.run_all import (
+    build_summary,
+    corrections_summary_lines,
+    count_reference_report_ids,
+)
 
 
 def test_build_summary_handles_object_shaped_phase3_report_ids(tmp_path, monkeypatch):
@@ -133,3 +137,46 @@ def test_build_summary_handles_object_shaped_phase3_report_ids(tmp_path, monkeyp
     assert "Data vintage: **Archive-2021-2025**" in summary
     assert "Reference IDs: `3`" in summary
     assert "DATA_VINTAGE=" not in summary
+    assert "Automation-level corrections (ADS and Level 2 ADAS): `n/a`" in summary
+    assert "`results/corrections.csv` was not generated for this run." in summary
+
+
+def test_build_summary_counts_corrections_answer_key(tmp_path, monkeypatch):
+    import scripts.run_all as run_all
+
+    root = tmp_path
+    processed = root / "data" / "processed"
+    results = root / "results"
+    raw = root / "data" / "raw"
+    processed.mkdir(parents=True)
+    results.mkdir(parents=True)
+    raw.mkdir(parents=True)
+    (processed / "ingest_metadata.json").write_text("{}", encoding="utf-8")
+    (raw / "DATA_VINTAGE.txt").write_text(
+        "DATA_VINTAGE=Archive-2021-2025\n", encoding="utf-8"
+    )
+    (results / "corrections.csv").write_text(
+        "Report ID,correction_kind,label_source\n"
+        "13781-1,automation_level,Automation System Engaged?\n"
+        "13781-2,automation_level,Automation System Engaged?\n"
+        "13781-2,other,Automation System Engaged?\n"
+        "10039-1,other,Automation System Engaged?\n",
+        encoding="utf-8",
+    )
+
+    monkeypatch.setattr(run_all, "ROOT", root)
+    summary = build_summary(
+        vintage="Archive-2021-2025",
+        llm_backend="transformers",
+        llm_sample=5,
+        ollama_model="Qwen/Qwen2.5-1.5B-Instruct",
+    )
+
+    assert "Label field: `Automation System Engaged?`" in summary
+    assert (
+        "Automation-level corrections (ADS and Level 2 ADAS): `2` reports (`2` rows)"
+        in summary
+    )
+    assert "Other changes in that field: `2` reports (`2` rows)" in summary
+    assert "- `corrections.csv`" in summary
+    assert corrections_summary_lines()[0].startswith("## Corrections answer key")

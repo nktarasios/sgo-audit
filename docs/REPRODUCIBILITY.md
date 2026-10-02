@@ -36,6 +36,7 @@ structured fields plus an optional narrative.
 | Piece | Where to change |
 |---|---|
 | Column names / aliases | `src/fields.py` |
+| Report-version corrections answer key | `src/corrections.py` |
 | Hard consistency rules | `src/heuristics.py` |
 | Model features / threshold | `src/classifier.py` |
 | Narrative prompt / parse | `src/llm_auditor.py` |

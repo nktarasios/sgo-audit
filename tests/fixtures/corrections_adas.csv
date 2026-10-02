@@ -1,0 +1,4 @@
+Report ID,Report Version,Reporting Entity,Report Type,Report Month,Report Year,Driver / Operator Type,ADAS/ADS System Version,ADS Equipped?,Automation System Engaged?,Operating Entity,Incident Date,City,State,Roadway Type,SV Pre-Crash Movement,SV Precrash Speed (MPH),Crash With,Highest Injury Severity Alleged,Narrative,Narrative - CBI?,Within ODD?,Report Submission Date
+R-ONCE,1,Example ADAS Co,Initial,11,2022,Consumer,l2,No,ADAS,Example Owner,2022-11-01,San Jose,CA,Street,Stopped,0,Pedestrian,Minor,Single version,No,Unknown,NOV-2022
+R-OTHER,1,Example ADAS Co,Initial,9,2022,Consumer,l2,No,ADAS,Example Owner,2022-09-01,San Jose,CA,Street,Going Straight,30,Vehicle,No Injuries,ADAS first,No,Unknown,SEP-2022
+R-OTHER,2,Example ADAS Co,Update,10,2022,Consumer,l2,No,"Unknown, see Narrative",Example Owner,2022-09-01,San Jose,CA,Street,Going Straight,30,Vehicle,No Injuries,Unknown later,No,Unknown,OCT-2022
